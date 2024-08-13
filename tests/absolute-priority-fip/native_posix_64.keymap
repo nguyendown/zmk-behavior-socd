@@ -1,0 +1,29 @@
+#include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/kscan_mock.h>
+#include "../behavior_keymap.dtsi"
+
+/* Basic SOCD test with FIP and AP. */
+
+&socd {
+    first-input-priority;
+    absolute-priority = <A>;
+};
+
+&kscan {
+    events = <
+        // Press &socd A
+        ZMK_MOCK_PRESS(0,0,10)
+        // Tap &socd D
+        ZMK_MOCK_PRESS(1,0,10)
+        ZMK_MOCK_RELEASE(1,0,10)
+        ZMK_MOCK_RELEASE(0,0,10)
+
+        // Press &socd D
+        ZMK_MOCK_PRESS(1,0,10)
+        // Tap &socd A
+        ZMK_MOCK_PRESS(0,0,10)
+        ZMK_MOCK_RELEASE(0,0,10)
+        ZMK_MOCK_RELEASE(1,0,10)
+    >;
+};

@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+        /omit-if-no-ref/ socd: socd {
+            compatible = "zmk,behavior-socd";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            display-name = "SOCD";
+        };
+    };
+};

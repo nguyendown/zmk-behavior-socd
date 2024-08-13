@@ -1,0 +1,20 @@
+#include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/kscan_mock.h>
+#include "../behavior_keymap.dtsi"
+
+/* SOCD keys and normal keys do not interfere with one another. */
+
+&kscan {
+    events = <
+        // Hold &kp W
+        ZMK_MOCK_PRESS(0,1,10)
+        // Basic SOCD test
+        ZMK_MOCK_PRESS(0,0,10)
+        ZMK_MOCK_PRESS(1,0,10)
+        ZMK_MOCK_RELEASE(1,0,10)
+        ZMK_MOCK_RELEASE(0,0,10)
+        // Release &kp W
+        ZMK_MOCK_RELEASE(0,1,10)
+    >;
+};

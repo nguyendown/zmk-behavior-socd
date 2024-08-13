@@ -1,0 +1,21 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: SOCD behavior
+
+compatible: "zmk,behavior-socd"
+
+include: one_param.yaml
+
+properties:
+  bindings:
+    type: phandles
+    required: true
+  no-resume:
+    type: boolean
+  neutral:
+    type: boolean
+  first-input-priority:
+    type: boolean
+  absolute-priority:
+    type: int

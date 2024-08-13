@@ -1,0 +1,22 @@
+#include <behaviors.dtsi>
+#include <behaviors/socd.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/kscan_mock.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &socd A &kp W
+                &socd D &mo 1>;
+        };
+
+        lower_layer {
+            bindings = <
+                &kp LEFT_SHIFT &kp LEFT_CONTROL
+                &kp Y  &kp Z>;
+        };
+    };
+};
