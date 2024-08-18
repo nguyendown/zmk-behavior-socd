@@ -6,6 +6,8 @@ SOCD cleaner for ZMK.
 
 See [Building With Modules](https://zmk.dev/docs/features/modules#building-with-modules).
 
+Edit `zmk-config/config/west.yml`.
+
 ```diff
 manifest:
   remotes:
