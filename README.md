@@ -65,7 +65,7 @@ SOCD behavior will switch to First Input Priority (FIP).
 ```dts
 &socd {
     first-input-priority;
-}
+};
 
 / {
     keymap {
@@ -82,7 +82,7 @@ The following example gives `&socd A` absolute priority.
 ```dts
 &socd {
     absolute-priority = <A>;
-}
+};
 ```
 
 ### `no-resume`
