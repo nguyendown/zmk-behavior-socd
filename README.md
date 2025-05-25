@@ -128,12 +128,12 @@ The following example creates a new SOCD instance that works separately from the
 ## Test
 
 ```shell
-cd path/to/zmk-behavior-socd
-scripts/run-test.sh
+cd /path/to/zmk/app
+ZMK_EXTRA_MODULES="/path/to/zmk-behavior-socd" west test /path/to/zmk-behavior-socd/tests
 ```
 
 For a specific test case.
 
 ```shell
-scripts/run-test.sh tests/wasd
+ZMK_EXTRA_MODULES="/path/to/zmk-behavior-socd" west test /path/to/zmk-behavior-socd/tests/socd/last-input-priority
 ```
